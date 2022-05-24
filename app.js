@@ -25,3 +25,4 @@ console.log(daysOfWeek[5]);
 daysOfWeek[7] = "holiday";
 daysOfWeek.push("lotto");
 console.log(daysOfWeek);
+
