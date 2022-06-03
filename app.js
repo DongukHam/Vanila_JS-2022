@@ -40,28 +40,48 @@
 // player.lastName='ham';
 // console.log(player);
 
-function sayHello(name) {
-    console.log(`Hello! My name is ` + name)
-}
+// function sayHello(name) {
+//     console.log(`Hello! My name is ` + name)
+// }
 
-alert("Welcome!");
-sayHello(`David Ham`);
+// alert("Welcome!");
+// sayHello(`David Ham`);
 
-function plus(a, b) {
-    console.log(a + b);
-}
-function divide(a,b){
-    console.log(a/b);
-}
+// function plus(a, b) {
+//     console.log(a + b);
+// }
+// function divide(a,b){
+//     console.log(a/b);
+// }
 
-plus(4,5);
-divide(4,2);
+// plus(4,5);
+// divide(4,2);
 
-const player = {
-    name:`juwon`,
-    sayHello: function(otherPerson) {
-        console.log(`hello ` + otherPerson + ` nice to meet you`)
+// const player = {
+//     name:`juwon`,
+//     sayHello: function(otherPerson) {
+//         console.log(`hello ` + otherPerson + ` nice to meet you`)
+//     }
+// };
+
+// player.sayHello('dayeon');
+
+const calculator = {
+    add: function(a,b) {
+        console.log(a+b);
+    },
+    minus: function(a,b) {
+        console.log(a-b);
+    },
+    multiple: function(a,b) {
+        console.log(a*b);
+    },
+    divide: function(a,b) {
+        console.log(a/b);
     }
 };
 
-player.sayHello('dayeon');
+calculator.add(5,1);
+calculator.minus(5,1);
+calculator.multiple(5,1);
+calculator.divide(5,1);
