@@ -67,21 +67,34 @@
 // player.sayHello('dayeon');
 
 const calculator = {
-    add: function(a,b) {
-        console.log(a+b);
+    plus: function(a,b) {
+        return a+b;
     },
     minus: function(a,b) {
-        console.log(a-b);
+        return a-b;
     },
     multiple: function(a,b) {
-        console.log(a*b);
+        return a*b;
     },
     divide: function(a,b) {
-        console.log(a/b);
+        return a/b;
+    },
+    power: function(a,b) {
+        return a**b;
     }
 };
 
-calculator.add(5,1);
-calculator.minus(5,1);
-calculator.multiple(5,1);
-calculator.divide(5,1);
+const plusResult = calculator.plus(5,1);
+const minusResult = calculator.minus(5,1);
+const multiResult = calculator.multiple(5,1);
+const divResult = calculator.divide(5,1);
+const powerResult = calculator.power(2, 3)
+
+const age = 96;
+function calculateKrAge(ageOfForeigner) {
+    return ageOfForeigner + 2;
+}
+
+const krAge = calculateKrAge(age);
+
+console.log(krAge);
