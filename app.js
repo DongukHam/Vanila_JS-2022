@@ -66,35 +66,60 @@
 
 // player.sayHello('dayeon');
 
-const calculator = {
-    plus: function(a,b) {
-        return a+b;
-    },
-    minus: function(a,b) {
-        return a-b;
-    },
-    multiple: function(a,b) {
-        return a*b;
-    },
-    divide: function(a,b) {
-        return a/b;
-    },
-    power: function(a,b) {
-        return a**b;
-    }
-};
+// const calculator = {
+//     plus: function(a,b) {
+//         return a+b;
+//     },
+//     minus: function(a,b) {
+//         return a-b;
+//     },
+//     multiple: function(a,b) {
+//         return a*b;
+//     },
+//     divide: function(a,b) {
+//         return a/b;
+//     },
+//     power: function(a,b) {
+//         return a**b;
+//     }
+// };
 
-const plusResult = calculator.plus(5,1);
-const minusResult = calculator.minus(5,1);
-const multiResult = calculator.multiple(5,1);
-const divResult = calculator.divide(5,1);
-const powerResult = calculator.power(2, 3)
+// const plusResult = calculator.plus(5,1);
+// const minusResult = calculator.minus(5,1);
+// const multiResult = calculator.multiple(5,1);
+// const divResult = calculator.divide(5,1);
+// const powerResult = calculator.power(2, 3)
 
-const age = 96;
-function calculateKrAge(ageOfForeigner) {
-    return ageOfForeigner + 2;
+// const age = 96;
+// function calculateKrAge(ageOfForeigner) {
+//     return ageOfForeigner + 2;
+// }
+
+// const krAge = calculateKrAge(age);
+
+// console.log(krAge);
+
+
+
+const age = parseInt(prompt('How old are you?'));
+
+console.log(isNaN(age));
+
+if(isNaN(age) || age<0){
+    console.log("Please write a number");
+}
+else if(age<18){
+    console.log("you are too young");
+}
+else if(age >=18 && age <=50 && age != 100){
+    console.log("You can drink");
+}
+else if(age ===100){
+    console.log("Wow, you are wise!")
+}
+else{
+    console.log("You can't drink");
 }
 
-const krAge = calculateKrAge(age);
 
-console.log(krAge);
+// else if(age >=18 || age <=50)
