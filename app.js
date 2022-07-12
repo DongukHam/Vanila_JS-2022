@@ -1,3 +1,25 @@
+// const title = document.getElementById("title");
+
+// console.dir(title);
+
+// title.innerText = "Got you!!"
+// console.log(title.className);
+
+// const hellos = document.getElementsByClassName("hello");
+
+// console.log(hellos);
+
+// const title = document.getElementsByTagName("h1");
+// console.log(title);
+
+const title = document.querySelector(".hello h1");
+console.log(title.innerText);
+
+title.innerText = "hello"
+
+
+
+
 // const a= 10 , b = 2;
 // let myName='David Ham';
 
@@ -101,25 +123,25 @@
 
 
 
-const age = parseInt(prompt('How old are you?'));
+// const age = parseInt(prompt('How old are you?'));
 
-console.log(isNaN(age));
+// console.log(isNaN(age));
 
-if(isNaN(age) || age<0){
-    console.log("Please write a number");
-}
-else if(age<18){
-    console.log("you are too young");
-}
-else if(age >=18 && age <=50 && age != 100){
-    console.log("You can drink");
-}
-else if(age ===100){
-    console.log("Wow, you are wise!")
-}
-else{
-    console.log("You can't drink");
-}
+// if(isNaN(age) || age<0){
+//     console.log("Please write a number");
+// }
+// else if(age<18){
+//     console.log("you are too young");
+// }
+// else if(age >=18 && age <=50 && age != 100){
+//     console.log("You can drink");
+// }
+// else if(age ===100){
+//     console.log("Wow, you are wise!");
+// }
+// else{
+//     console.log("You can't drink");
+// };
 
 
 // else if(age >=18 || age <=50)
