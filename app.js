@@ -12,11 +12,28 @@
 // const title = document.getElementsByTagName("h1");
 // console.log(title);
 
-const title = document.querySelector(".hello h1");
-console.log(title.innerText);
+const title = document.querySelector("div.hello:first-child h1");
 
-title.innerText = "hello"
+function handleTitleClick() {
+    title.style.color = "blue";
+}
 
+function handleMouseEnter() {
+    title.innerHTML = "mouse is here!";
+}
+
+function handleMouseLeave() {
+    title.innerHTML = "mouse is left!";
+}
+
+// console.log(title.innerText);
+
+// title.innerText = "hello";
+// title.style.color = "blue";
+
+title.addEventListener("click", handleTitleClick);
+title.addEventListener("mouseenter", handleMouseEnter);
+title.addEventListener("mouseleave", handleMouseLeave);
 
 
 
