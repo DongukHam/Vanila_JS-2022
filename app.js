@@ -12,29 +12,73 @@
 // const title = document.getElementsByTagName("h1");
 // console.log(title);
 
-const title = document.querySelector("div.hello:first-child h1");
+const h1 = document.querySelector("div.hello:first-child h1");
 
 function handleTitleClick() {
-    title.style.color = "blue";
+    const clickedClass = "clicked";
+    if(h1.className === clickedClass){
+        h1.className = "";
+    }else {
+        h1.className = clickedClass;
+    }
+
+    if(h1.classList.contain(clickedClass)){
+        h1.classList.remove(clickedClass);
+    }else {
+        h1.classList.add(clickedClass);
+    }
+
+    h1.classList.toggle("clicked");
+    
+    
+    // const currentColor = h1.style.color;
+    // let newColor
+    // if(currentColor === "blue"){
+    //     newColor = "tomato"
+    // } else {
+    // newColor = "blue";
+    // }
+    // h1.style.color = newColor;
 }
 
 function handleMouseEnter() {
-    title.innerHTML = "mouse is here!";
+    h1.innerHTML = "mouse is here!";
 }
 
 function handleMouseLeave() {
-    title.innerHTML = "mouse is left!";
+    h1.innerHTML = "mouse is left!";
 }
 
-// console.log(title.innerText);
+function handleWindowResize() {
+    document.body.style.backgroundColor = "tomato";
+}
 
-// title.innerText = "hello";
-// title.style.color = "blue";
+function handleWindowCopy(){
+    alert("copied!");
+}
 
-title.addEventListener("click", handleTitleClick);
-title.addEventListener("mouseenter", handleMouseEnter);
-title.addEventListener("mouseleave", handleMouseLeave);
+function handleWindowOffline() {
+    alert("SOS no wifi");
+}
 
+function handleWindowOnline() {
+    alert("Network is connected")
+}
+
+// console.log(h1.innerText);
+
+// h1.innerText = "hello";
+// h1.style.color = "blue";
+
+// h1.onclick = handleTitleClick;
+h1.addEventListener("click", handleTitleClick);
+h1.addEventListener("mouseenter", handleMouseEnter);
+h1.addEventListener("mouseleave", handleMouseLeave);
+
+window.addEventListener("resize", handleWindowResize);
+window.addEventListener("copy", handleWindowCopy);
+window.addEventListener("offline", handleWindowOffline);
+window.addEventListener("online", handleWindowOnline);
 
 
 // const a= 10 , b = 2;
