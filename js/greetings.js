@@ -13,7 +13,10 @@ function onLoginSubmit(event) {
     localStorage.setItem(USERNAME_KEY, username);
     paintGreetings(username);
     
+    
 }
+
+
 
 // function handleLinkClick(event){
 //     console.log(event);
@@ -25,6 +28,11 @@ loginForm.addEventListener("submit", onLoginSubmit);
 function paintGreetings(username) {
     greeting.innerHTML = `Hello ${username}`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
+    const button = document.createElement("button");
+    button.innerText = "Logout";
+    greeting.appendChild(button);
+    button.addEventListener("click", deleteUser);
+    deleteUser();
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
@@ -36,6 +44,15 @@ if(savedUsername === null) {
     paintGreetings(savedUsername);
 
 }
+
+function deleteUser(event){
+    
+    localStorage.removeItem(USERNAME_KEY);
+}
+
+
+
+
 // link.addEventListener("click", handleLinkClick);
 
 // with () automatically execute the function
