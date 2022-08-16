@@ -32,7 +32,6 @@ function paintGreetings(username) {
     button.innerText = "Logout";
     greeting.appendChild(button);
     button.addEventListener("click", deleteUser);
-    deleteUser();
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
@@ -46,7 +45,6 @@ if(savedUsername === null) {
 }
 
 function deleteUser(event){
-    
     localStorage.removeItem(USERNAME_KEY);
 }
 
