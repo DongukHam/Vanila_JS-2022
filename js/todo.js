@@ -8,16 +8,16 @@ const TODOS_KEY ="todos";
 let toDos = [];
 
 function saveTodos() {
-    localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
+    localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));}
 
-}
 
 function deleteToDo(event){
     const li = event.target.parentElement;
     li.remove();
+    toDos = toDos.filter(toDo=> toDo.id !== parseInt(li.id));
+    saveTodos();
+    
     // toDoList.removeChild(event.target.parentElement);
-    const toDeleteItem = localStorage.getItem(li.id);
-    console.log(toDeleteItem)
 }
 
 function paintToDo(newTodo) {
@@ -58,3 +58,4 @@ if(savedToDos) {
     toDos = parsedToDos;
     parsedToDos.forEach(paintToDo);
 }
+
