@@ -11,3 +11,4 @@ const bgImageUrl = `url("img/${chosenImage}")`
 // document.body.appendChild(bgImage);
 
 document.body.style.backgroundImage = bgImageUrl;
+
